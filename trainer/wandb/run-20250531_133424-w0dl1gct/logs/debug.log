@@ -1,0 +1,44 @@
+2025-05-31 13:34:24,893 INFO    MainThread:24356 [wandb_setup.py:_flush():79] Current SDK version is 0.18.3
+2025-05-31 13:34:24,893 INFO    MainThread:24356 [wandb_setup.py:_flush():79] Configure stats pid to 24356
+2025-05-31 13:34:24,893 INFO    MainThread:24356 [wandb_setup.py:_flush():79] Loading settings from C:\Users\DJ\.config\wandb\settings
+2025-05-31 13:34:24,893 INFO    MainThread:24356 [wandb_setup.py:_flush():79] Loading settings from E:\Desktop\Documents\Git\minimind\trainer\wandb\settings
+2025-05-31 13:34:24,893 INFO    MainThread:24356 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2025-05-31 13:34:24,893 INFO    MainThread:24356 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2025-05-31 13:34:24,895 INFO    MainThread:24356 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'trainer\\train_lora.py', 'program_abspath': 'E:\\Desktop\\Documents\\Git\\minimind\\trainer\\train_lora.py', 'program': 'E:\\Desktop\\Documents\\Git\\minimind\\trainer\\train_lora.py'}
+2025-05-31 13:34:24,895 INFO    MainThread:24356 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-05-31 13:34:24,895 INFO    MainThread:24356 [wandb_init.py:_log_setup():532] Logging user logs to E:\Desktop\Documents\Git\minimind\trainer\wandb\run-20250531_133424-w0dl1gct\logs\debug.log
+2025-05-31 13:34:24,895 INFO    MainThread:24356 [wandb_init.py:_log_setup():533] Logging internal logs to E:\Desktop\Documents\Git\minimind\trainer\wandb\run-20250531_133424-w0dl1gct\logs\debug-internal.log
+2025-05-31 13:34:24,895 INFO    MainThread:24356 [wandb_init.py:init():617] calling init triggers
+2025-05-31 13:34:24,895 INFO    MainThread:24356 [wandb_init.py:init():624] wandb.init called with sweep_config: {}
+config: {}
+2025-05-31 13:34:24,895 INFO    MainThread:24356 [wandb_init.py:init():667] starting backend
+2025-05-31 13:34:24,895 INFO    MainThread:24356 [wandb_init.py:init():671] sending inform_init request
+2025-05-31 13:34:24,896 INFO    MainThread:24356 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=spawn, using: spawn
+2025-05-31 13:34:24,898 INFO    MainThread:24356 [wandb_init.py:init():684] backend started and connected
+2025-05-31 13:34:24,901 INFO    MainThread:24356 [wandb_init.py:init():779] updated telemetry
+2025-05-31 13:34:24,945 INFO    MainThread:24356 [wandb_init.py:init():812] communicating run to backend with 90.0 second timeout
+2025-05-31 13:35:15,338 WARNING MainThread:24356 [wandb_init.py:init():1256] interrupted
+Traceback (most recent call last):
+  File "E:\Anaconda\envs\minimind\Lib\site-packages\wandb\sdk\wandb_init.py", line 1252, in init
+    return wi.init()
+           ^^^^^^^^^
+  File "E:\Anaconda\envs\minimind\Lib\site-packages\wandb\sdk\wandb_init.py", line 815, in init
+    result = run_init_handle.wait(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anaconda\envs\minimind\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anaconda\envs\minimind\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anaconda\envs\minimind\Lib\site-packages\wandb\sdk\lib\mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anaconda\envs\minimind\Lib\threading.py", line 634, in wait
+    signaled = self._cond.wait(timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Anaconda\envs\minimind\Lib\threading.py", line 338, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-05-31 13:35:15,345 WARNING MsgRouterThr:24356 [router.py:message_loop():77] message_loop has been closed

@@ -1,0 +1,30 @@
+{
+  "os": "Windows-11-10.0.26100-SP0",
+  "python": "3.12.0",
+  "startedAt": "2025-05-27T13:40:47.722849Z",
+  "args": [
+    "--lora_name",
+    "lora_cooking",
+    "--data_path",
+    "../dataset/howtocook.jsonl",
+    "--out_dir",
+    "../out",
+    "--epochs",
+    "20",
+    "--use_wandb",
+    "--wandb_project",
+    "chatbot_project"
+  ],
+  "program": "E:\\Desktop\\Documents\\Git\\minimind\\trainer\\train_lora.py",
+  "codePath": "trainer\\train_lora.py",
+  "git": {
+    "remote": "https://github.com/jingyaogong/minimind.git",
+    "commit": "561979c7e34ed48bce320598952d892dce33ccd6"
+  },
+  "email": "2717166816@qq.com",
+  "root": "E:\\Desktop\\Documents\\Git\\minimind\\trainer",
+  "host": "mystery-childish-man",
+  "username": "DJ",
+  "executable": "E:\\Anaconda\\envs\\minimind\\python.exe",
+  "codePathLocal": "train_lora.py"
+}

@@ -1,0 +1,21 @@
+{"time":"2025-06-03T13:48:47.271751+08:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-06-03T13:48:47.271751+08:00","level":"INFO","msg":"created symlink","path":"E:\\Desktop\\Documents\\Git\\minimind\\trainer\\wandb\\run-20250603_134847-mqhxkzcs\\logs\\debug-core.log"}
+{"time":"2025-06-03T13:48:47.272384+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-06-03T13:48:47.4511144+08:00","level":"INFO","msg":"created new stream","id":"mqhxkzcs"}
+{"time":"2025-06-03T13:48:47.4529196+08:00","level":"INFO","msg":"stream: started","id":"mqhxkzcs"}
+{"time":"2025-06-03T13:48:47.4529196+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"mqhxkzcs"}}
+{"time":"2025-06-03T13:48:47.4529196+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"mqhxkzcs"}}
+{"time":"2025-06-03T13:48:47.4529196+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"mqhxkzcs"}}
+{"time":"2025-06-03T13:48:48.9752661+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-06-03T13:48:48.9763049+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-06-03T13:56:10.3452331+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2717166816-sun-yat-sen-university/chatbot_project/mqhxkzcs/file_stream\": EOF"}
+{"time":"2025-06-03T14:56:15.420275+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2717166816-sun-yat-sen-university/chatbot_project/mqhxkzcs/file_stream\": EOF"}
+{"time":"2025-06-03T15:26:10.357226+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/2717166816-sun-yat-sen-university/chatbot_project/mqhxkzcs/file_stream\": EOF"}
+{"time":"2025-06-03T15:33:31.0343827+08:00","level":"INFO","msg":"stream: closing","id":"mqhxkzcs"}
+{"time":"2025-06-03T15:33:31.0351094+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-06-03T15:33:31.0394578+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-06-03T15:33:33.4488615+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-06-03T15:33:34.3365035+08:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"mqhxkzcs"}}
+{"time":"2025-06-03T15:33:34.3365035+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"mqhxkzcs"}}
+{"time":"2025-06-03T15:33:34.3365035+08:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"mqhxkzcs"}}
+{"time":"2025-06-03T15:33:34.3365035+08:00","level":"INFO","msg":"stream: closed","id":"mqhxkzcs"}

@@ -1,0 +1,18 @@
+{"time":"2025-05-31T13:36:32.7582144+08:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2025-05-31T13:36:32.7582144+08:00","level":"INFO","msg":"created symlink","path":"E:\\Desktop\\Documents\\Git\\minimind\\trainer\\wandb\\run-20250531_133632-cgbbmlc9\\logs\\debug-core.log"}
+{"time":"2025-05-31T13:36:32.7593485+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2025-05-31T13:36:32.7861802+08:00","level":"INFO","msg":"created new stream","id":"cgbbmlc9"}
+{"time":"2025-05-31T13:36:32.7877408+08:00","level":"INFO","msg":"stream: started","id":"cgbbmlc9"}
+{"time":"2025-05-31T13:36:32.7877408+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"cgbbmlc9"}}
+{"time":"2025-05-31T13:36:32.7877408+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"cgbbmlc9"}}
+{"time":"2025-05-31T13:36:32.7877408+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"cgbbmlc9"}}
+{"time":"2025-05-31T13:36:33.8809795+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2025-05-31T13:36:33.8822039+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-31T14:31:05.6996345+08:00","level":"INFO","msg":"stream: closing","id":"cgbbmlc9"}
+{"time":"2025-05-31T14:31:05.6996345+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-31T14:31:05.7059348+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-31T14:31:08.1965597+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-31T14:31:09.0902448+08:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"cgbbmlc9"}}
+{"time":"2025-05-31T14:31:09.0902448+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"cgbbmlc9"}}
+{"time":"2025-05-31T14:31:09.0902448+08:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"cgbbmlc9"}}
+{"time":"2025-05-31T14:31:09.0902448+08:00","level":"INFO","msg":"stream: closed","id":"cgbbmlc9"}
