@@ -102,7 +102,7 @@ def process_assistant_content(content):
 
 config = {
     "out_dir": "out",
-    "lora_name": "long_cooking1e-4",
+    "lora_name": "cooking1e-4",
     "num_hidden_layers": 8,
     "hidden_size": 512,
 }
@@ -184,14 +184,13 @@ MODEL_PATHS = {
 
 selected_model = st.sidebar.selectbox('选择模型', list(MODEL_PATHS.keys()), index=0)  # 默认选择 MiniMind2
 model_path = MODEL_PATHS[selected_model][0]
-slogan = f"你好，我是杜健和崔凯乾开发的AI做菜助手"
+slogan = f"你好，我是杜健和崔凯乾开发的Milkmind龙芯版"
 
-image_url = "https://www.modelscope.cn/api/v1/studio/gongjy/MiniMind/repo?Revision=master&FilePath=images%2Flogo2.png&View=true"
+image_url = "../pictures/img.png"
 
 st.markdown(
     f'<div style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0; padding: 0;">'
     '<div style="font-style: italic; font-weight: 900; margin: 0; padding-top: 4px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; width: 100%;">'
-    f'<img src="{image_url}" style="width: 45px; height: 45px; "> '
     f'<span style="font-size: 26px; margin-left: 10px;">{slogan}</span>'
     '</div>'
     '<span style="color: #bbb; font-style: italic; margin-top: 6px; margin-bottom: 10px;">内容完全由AI生成，吃出问题概不负责。'
@@ -235,7 +234,7 @@ def main():
                 f'<div style="display: flex; justify-content: flex-end;"><div style="display: inline-block; margin: 10px 0; padding: 8px 12px 8px 12px;  background-color: gray; border-radius: 10px; color:white; ">{message["content"]}</div></div>',
                 unsafe_allow_html=True)
 
-    prompt = st.chat_input(key="input", placeholder="和Minimind对话：")
+    prompt = st.chat_input(key="input", placeholder="和Milkmind龙芯版对话：")
 
     if hasattr(st.session_state, 'regenerate') and st.session_state.regenerate:
         prompt = st.session_state.last_user_message
