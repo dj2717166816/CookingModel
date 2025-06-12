@@ -76,7 +76,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 def process_assistant_content(content):
-    if model_source != "API" and 'R1' not in MODEL_PATHS[selected_model][1]:
+    if 'R1' not in "MiniMind2":
         return content
 
     if '<think>' in content and '</think>' in content:
@@ -102,10 +102,12 @@ def process_assistant_content(content):
 
 config = {
     "out_dir": "out",
-    "lora_name": "cooking1e-4",
+    "lora_name": ["cooking1e-3", "cooking1e-4", "long_cooking5e-5"],
     "num_hidden_layers": 8,
     "hidden_size": 512,
 }
+
+selected_lora = st.sidebar.selectbox('选择模型', list(config["lora_name"]), index=0)
 
 
 def init_model():
@@ -120,10 +122,8 @@ def init_model():
     ))
 
     model.load_state_dict(torch.load(ckp, map_location='cuda'), strict=True)
-
-    if config["lora_name"] != 'None':
-        apply_lora(model)
-        load_lora(model, f'../{config["out_dir"]}/lora/{config["lora_name"]}_512.pth')
+    apply_lora(model)
+    load_lora(model, f'../{config["out_dir"]}/lora/{selected_lora}_512.pth')
 
     return model.eval().to('cuda'), tokenizer
 
@@ -176,14 +176,6 @@ st.session_state.history_chat_num = st.sidebar.slider("历史对话数", 0, 6, 0
 st.session_state.max_new_tokens = st.sidebar.slider("最大序列长度", 256, 8192, 8192, step=1)
 st.session_state.temperature = st.sidebar.slider("模型温度", 0.6, 1.2, 0.85, step=0.01)
 
-model_source = st.sidebar.radio("选择模型来源", ["本地模型"], index=0)
-
-MODEL_PATHS = {
-    "做饭糕手": ["../MiniMind2", "MiniMind2"],
-}
-
-selected_model = st.sidebar.selectbox('选择模型', list(MODEL_PATHS.keys()), index=0)  # 默认选择 MiniMind2
-model_path = MODEL_PATHS[selected_model][0]
 slogan = f"你好，我是杜健和崔凯乾开发的Milkmind龙芯版"
 
 image_url = "../pictures/img.png"
@@ -210,10 +202,7 @@ def setup_seed(seed):
 
 
 def main():
-    if model_source == "本地模型":
-        model, tokenizer = init_model()
-    else:
-        model, tokenizer = None, None
+    model, tokenizer = init_model()
 
     if "messages" not in st.session_state:
         st.session_state.messages = []
