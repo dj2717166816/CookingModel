@@ -102,12 +102,12 @@ def process_assistant_content(content):
 
 config = {
     "out_dir": "out",
-    "lora_name": ["cooking1e-3", "cooking1e-4", "long_cooking5e-5"],
+    "lora_name": ["cooking1e-3", "cooking1e-4", "long_cooking5e-5","lora_cook_newdata_30epoch"],
     "num_hidden_layers": 8,
     "hidden_size": 512,
 }
 
-selected_lora = st.sidebar.selectbox('选择模型', list(config["lora_name"]), index=0)
+selected_lora = st.sidebar.selectbox('选择模型', list(config["lora_name"]), index=3)
 
 
 def init_model():
@@ -121,11 +121,11 @@ def init_model():
         use_moe=False
     ))
 
-    model.load_state_dict(torch.load(ckp, map_location='cuda'), strict=True)
+    model.load_state_dict(torch.load(ckp, map_location=device), strict=True)
     apply_lora(model)
     load_lora(model, f'../{config["out_dir"]}/lora/{selected_lora}_512.pth')
 
-    return model.eval().to('cuda'), tokenizer
+    return model.eval().to(device), tokenizer
 
 
 def clear_chat_messages():
